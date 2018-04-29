@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="80" width="375" height="649"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityCell" rowHeight="70" id="xKu-3T-DiU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityCell" rowHeight="70" id="xKu-3T-DiU" customClass="ActivityCell" customModule="define_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xKu-3T-DiU" id="vXz-Z5-aF0">
@@ -170,6 +170,13 @@
                                                 <constraint firstItem="0fs-oX-2WH" firstAttribute="top" secondItem="vXz-Z5-aF0" secondAttribute="topMargin" id="sLl-Lo-RNA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activityDateLbl" destination="m9a-hB-zYs" id="rj2-6D-uGg"/>
+                                            <outlet property="activityRepsCountLbl" destination="mhp-Zp-UeI" id="qK5-51-D67"/>
+                                            <outlet property="activitySetsCountLbl" destination="Iz7-ql-31Y" id="yym-Lz-Bh6"/>
+                                            <outlet property="activityTotalCountLbl" destination="2Ot-6I-I44" id="Ryy-To-vrT"/>
+                                            <outlet property="activityTypeLbl" destination="rDd-qI-xPq" id="M1c-VL-jDq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -187,6 +194,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Activity" id="2R6-kP-XkM"/>
+                    <connections>
+                        <outlet property="tableView" destination="7vr-qr-TDg" id="RoE-iC-TcO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
