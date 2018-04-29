@@ -16,6 +16,8 @@
 		31BBA810209492F800FC6768 /* AddActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA80F209492F800FC6768 /* AddActivityVC.swift */; };
 		31BBA8132095C3F500FC6768 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA8122095C3F500FC6768 /* ActivityCell.swift */; };
 		31BBA8162095C55400FC6768 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA8152095C55400FC6768 /* Activity.swift */; };
+		31BBA8192096218200FC6768 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA8182096218200FC6768 /* DataService.swift */; };
+		31BBA81C2096738F00FC6768 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA81B2096738F00FC6768 /* Constants.swift */; };
 		55637EA8E0B1E95F6C210D37 /* Pods_define_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBD0873A4C1DF03873BABC2 /* Pods_define_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		31BBA80F209492F800FC6768 /* AddActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityVC.swift; sourceTree = "<group>"; };
 		31BBA8122095C3F500FC6768 /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		31BBA8152095C55400FC6768 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		31BBA8182096218200FC6768 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		31BBA81B2096738F00FC6768 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8DBD0873A4C1DF03873BABC2 /* Pods_define_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_define_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B317764EF35B5C41C2AAE5BD /* Pods-define-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-define-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-define-app/Pods-define-app.release.xcconfig"; sourceTree = "<group>"; };
 		CD0EB39F5F2D867D025367F6 /* Pods-define-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-define-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-define-app/Pods-define-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,9 +81,11 @@
 		312B1E892083E0ED0044D006 /* define-app */ = {
 			isa = PBXGroup;
 			children = (
+				31BBA8172096217400FC6768 /* Services */,
 				31BBA8142095C54A00FC6768 /* Model */,
 				31BBA8112095C3E000FC6768 /* View */,
 				31BBA80A2094913900FC6768 /* Controller */,
+				31BBA81A2096738100FC6768 /* Utilities */,
 				312B1E8A2083E0ED0044D006 /* AppDelegate.swift */,
 				312B1E8E2083E0ED0044D006 /* Main.storyboard */,
 				312B1E912083E0F00044D006 /* Assets.xcassets */,
@@ -113,6 +119,22 @@
 				31BBA8152095C55400FC6768 /* Activity.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		31BBA8172096217400FC6768 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				31BBA8182096218200FC6768 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		31BBA81A2096738100FC6768 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				31BBA81B2096738F00FC6768 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		F392A799B61E864F6AF7D053 /* Pods */ = {
@@ -255,11 +277,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				31BBA8162095C55400FC6768 /* Activity.swift in Sources */,
+				31BBA8192096218200FC6768 /* DataService.swift in Sources */,
 				312B1E8B2083E0ED0044D006 /* AppDelegate.swift in Sources */,
 				31BBA810209492F800FC6768 /* AddActivityVC.swift in Sources */,
 				31BBA8132095C3F500FC6768 /* ActivityCell.swift in Sources */,
 				31BBA80E209492C300FC6768 /* InfoVC.swift in Sources */,
 				31BBA80C2094922A00FC6768 /* ActivityVC.swift in Sources */,
+				31BBA81C2096738F00FC6768 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +431,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7ZZ4473DX;
 				INFOPLIST_FILE = "define-app/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danbonehillapps.define-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -423,7 +450,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7ZZ4473DX;
 				INFOPLIST_FILE = "define-app/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danbonehillapps.define-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

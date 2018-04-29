@@ -7,15 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Activity {
-    public private(set) var activityDate: String
-    public private(set) var activityType: String
-    public private(set) var activityRepsCount: Int
-    public private(set) var activitySetsCount: Int
-    public private(set) var activityTotalCount: Int
+class Activity: Object {
+    @objc dynamic public private(set) var activityDate: String!
+    @objc dynamic public private(set) var activityType: String!
+    @objc dynamic public private(set) var activityRepsCount: Int = 0
+    @objc dynamic public private(set) var activitySetsCount: Int = 0
+    @objc dynamic public private(set) var activityTotalCount: Int = 0
     
-    init(activityDate: String, activityType: String, activityRepsCount: Int, activitySetsCount: Int, activityTotalCount: Int) {
+    convenience init(activityDate: String, activityType: String, activityRepsCount: Int, activitySetsCount: Int, activityTotalCount: Int) {
+        self.init()
+        
         self.activityDate = activityDate
         self.activityType = activityType
         self.activityRepsCount = activityRepsCount
