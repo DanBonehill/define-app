@@ -17,7 +17,7 @@ class ActivityCell: UITableViewCell {
     @IBOutlet weak var activityTotalCountLbl: UILabel!
     
     func updateViews(activity: Activity) {
-        activityDateLbl.text = activity.activityDate
+        activityDateLbl.text = "\(activity.activityDate)"
         activityTypeLbl.text = activity.activityType
         activityRepsCountLbl.text = "\(activity.activityRepsCount)"
         activitySetsCountLbl.text = "\(activity.activitySetsCount)"

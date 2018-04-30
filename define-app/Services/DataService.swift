@@ -12,11 +12,11 @@ import RealmSwift
 class DataService {
     static let instance = DataService()
     
-    func addActivity(activityDate: String, activityType: String, activityRepsCount: Int, activitySetsCount: Int, activityTotalCount: Int) {
+    func addActivity(activityType: String, activityRepsCount: Int, activitySetsCount: Int, activityTotalCount: Int) {
         QUEUE.sync {
-            let activity = Activity(activityDate: activityDate, activityType: activityType, activityRepsCount: activityRepsCount, activitySetsCount: activitySetsCount, activityTotalCount: activityTotalCount)
+            let activity = Activity(activityType: activityType, activityRepsCount: activityRepsCount, activitySetsCount: activitySetsCount)
             do {
-                let realm = try Realm()
+                let realm = try Realm(configuration: RealmConfig.dataConfig)
                 try realm.write {
                     realm.add(activity)
                     try realm.commitWrite()
@@ -25,12 +25,11 @@ class DataService {
                 debugPrint("Error adding run to realm: \(error.localizedDescription)")
             }
         }
-        
     }
     
     func getAllActivities() -> Results<Activity>? {
         do {
-            let realm = try Realm()
+            let realm = try Realm(configuration: RealmConfig.dataConfig)
             let activities = realm.objects(Activity.self)
             
             return activities

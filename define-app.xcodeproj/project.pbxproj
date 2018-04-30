@@ -18,6 +18,7 @@
 		31BBA8162095C55400FC6768 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA8152095C55400FC6768 /* Activity.swift */; };
 		31BBA8192096218200FC6768 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA8182096218200FC6768 /* DataService.swift */; };
 		31BBA81C2096738F00FC6768 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA81B2096738F00FC6768 /* Constants.swift */; };
+		31BBA81E2096FCD500FC6768 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA81D2096FCD500FC6768 /* RealmConfig.swift */; };
 		55637EA8E0B1E95F6C210D37 /* Pods_define_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBD0873A4C1DF03873BABC2 /* Pods_define_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		31BBA8152095C55400FC6768 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		31BBA8182096218200FC6768 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		31BBA81B2096738F00FC6768 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		31BBA81D2096FCD500FC6768 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		8DBD0873A4C1DF03873BABC2 /* Pods_define_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_define_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B317764EF35B5C41C2AAE5BD /* Pods-define-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-define-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-define-app/Pods-define-app.release.xcconfig"; sourceTree = "<group>"; };
 		CD0EB39F5F2D867D025367F6 /* Pods-define-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-define-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-define-app/Pods-define-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				31BBA81B2096738F00FC6768 /* Constants.swift */,
+				31BBA81D2096FCD500FC6768 /* RealmConfig.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				31BBA8162095C55400FC6768 /* Activity.swift in Sources */,
 				31BBA8192096218200FC6768 /* DataService.swift in Sources */,
+				31BBA81E2096FCD500FC6768 /* RealmConfig.swift in Sources */,
 				312B1E8B2083E0ED0044D006 /* AppDelegate.swift in Sources */,
 				31BBA810209492F800FC6768 /* AddActivityVC.swift in Sources */,
 				31BBA8132095C3F500FC6768 /* ActivityCell.swift in Sources */,
