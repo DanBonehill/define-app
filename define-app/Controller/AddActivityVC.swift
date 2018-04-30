@@ -14,6 +14,8 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     @IBOutlet weak var activityTypePicker: UIPickerView!
     @IBOutlet weak var activityTypeField: UITextField!
+    @IBOutlet weak var activityRepsField: UITextField!
+    @IBOutlet weak var activitySetsField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,15 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         activityPickerData = ["Squats", "Plank", "Press Up", "Crunches", "Sit Ups", "Bridge", "The Bird Dog"]
         activityTypePicker.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1) // #F6F6F6
+    }
+    
+    @IBAction func createActivityBtnPressed(_ sender: Any) {
+        if activityTypeField.text != "Select Activity" && activityRepsField.text != "" && activitySetsField.text != "" {
+            DataService.instance.addActivity(activityType: activityTypeField.text!, activityRepsCount: Int(activityRepsField.text!)!, activitySetsCount: Int(activitySetsField.text!)!)
+            dismiss(animated: true, completion: nil)
+        } else {
+            print("No values provided")
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

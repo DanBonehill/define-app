@@ -12,7 +12,7 @@ import RealmSwift
 class DataService {
     static let instance = DataService()
     
-    func addActivity(activityType: String, activityRepsCount: Int, activitySetsCount: Int, activityTotalCount: Int) {
+    func addActivity(activityType: String, activityRepsCount: Int, activitySetsCount: Int) {
         QUEUE.sync {
             let activity = Activity(activityType: activityType, activityRepsCount: activityRepsCount, activitySetsCount: activitySetsCount)
             do {
