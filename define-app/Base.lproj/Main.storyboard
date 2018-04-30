@@ -74,17 +74,17 @@
                                                     <rect key="frame" x="15" y="11" width="105.33333333333331" height="43"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/00/00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9a-hB-zYs">
-                                                            <rect key="frame" x="0.0" y="0.0" width="72.666666666666671" height="20.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="85" height="15"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="20.329999999999998" id="PiW-Ge-7RV"/>
-                                                                <constraint firstAttribute="width" constant="72.670000000000002" id="o6u-DB-Bvg"/>
+                                                                <constraint firstAttribute="height" constant="15" id="PiW-Ge-7RV"/>
+                                                                <constraint firstAttribute="width" constant="85" id="o6u-DB-Bvg"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDd-qI-xPq">
-                                                            <rect key="frame" x="0.0" y="30.333333333333339" width="53.333333333333336" height="12.666666666666668"/>
+                                                            <rect key="frame" x="0.0" y="25" width="53.333333333333336" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
