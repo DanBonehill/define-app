@@ -8,10 +8,49 @@
 
 import UIKit
 
-class AddActivityVC: UIViewController {
-
+class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+    
+    var activityPickerData: [String] = [String]()
+    
+    @IBOutlet weak var activityTypePicker: UIPickerView!
+    @IBOutlet weak var activityTypeField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.activityTypeField.delegate = self
+        self.activityTypePicker.delegate = self
+        self.activityTypePicker.dataSource = self
+        
+        activityTypeField.text = "Select Activity"
+        activityTypeField.textAlignment = .center
+        
+        activityPickerData = ["Squats", "Plank", "Press Up", "Crunches", "Sit Ups", "Bridge", "The Bird Dog"]
+        activityTypePicker.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1) // #F6F6F6
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return activityPickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return activityPickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.view.endEditing(true)
+        activityTypePicker.isHidden = true
+        activityTypeField.isHidden = false
+        activityTypeField.text = activityPickerData[row]
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activityTypeField.isHidden = true
+        activityTypePicker.isHidden = false
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
