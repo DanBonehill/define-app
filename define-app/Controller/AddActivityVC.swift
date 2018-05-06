@@ -29,6 +29,7 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         activityPickerData = ["Squats", "Plank", "Press Up", "Crunches", "Sit Ups", "Bridge", "The Bird Dog"]
         activityTypePicker.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1) // #F6F6F6
+        activityTypePicker.isHidden = true
     }
     
     @IBAction func createActivityBtnPressed(_ sender: Any) {
