@@ -236,12 +236,6 @@
                                     <action selector="backBtnPressed:" destination="nx8-Fk-Egd" eventType="touchUpInside" id="DNi-42-6Vx"/>
                                 </connections>
                             </button>
-                            <pickerView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNY-r8-QDn">
-                                <rect key="frame" x="0.0" y="618" width="375" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="OPF-KW-Zdq"/>
-                                </constraints>
-                            </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-ml-rtd">
                                 <rect key="frame" x="122" y="97" width="130" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -291,16 +285,13 @@
                             <constraint firstItem="65I-OR-Tyx" firstAttribute="trailing" secondItem="yQl-2Y-SuD" secondAttribute="trailing" id="0Z0-LU-wSR"/>
                             <constraint firstItem="ZKJ-wt-LTY" firstAttribute="trailing" secondItem="yQl-2Y-SuD" secondAttribute="trailing" id="0vz-mC-fkF"/>
                             <constraint firstItem="ytK-Q4-gPu" firstAttribute="centerY" secondItem="HR0-mC-uXy" secondAttribute="centerY" id="8fZ-CE-KVu"/>
-                            <constraint firstItem="XNY-r8-QDn" firstAttribute="leading" secondItem="yQl-2Y-SuD" secondAttribute="leading" id="Bb6-cR-GE2"/>
                             <constraint firstItem="HR0-mC-uXy" firstAttribute="top" secondItem="a2t-kk-ss0" secondAttribute="top" constant="42" id="Dty-nT-yUP"/>
                             <constraint firstAttribute="bottom" secondItem="65I-OR-Tyx" secondAttribute="bottom" id="EIQ-KV-zuo"/>
-                            <constraint firstItem="XNY-r8-QDn" firstAttribute="bottom" secondItem="yQl-2Y-SuD" secondAttribute="bottom" id="H1n-QK-hHn"/>
                             <constraint firstItem="HR0-mC-uXy" firstAttribute="leading" secondItem="yQl-2Y-SuD" secondAttribute="leading" constant="16" id="LD3-nV-7dE"/>
                             <constraint firstItem="ZKJ-wt-LTY" firstAttribute="top" secondItem="a2t-kk-ss0" secondAttribute="top" id="SDH-IW-wyB"/>
                             <constraint firstItem="65I-OR-Tyx" firstAttribute="leading" secondItem="yQl-2Y-SuD" secondAttribute="leading" id="SDR-BD-hWX"/>
                             <constraint firstItem="65I-OR-Tyx" firstAttribute="top" secondItem="a2t-kk-ss0" secondAttribute="top" id="SSG-Zq-pn8"/>
                             <constraint firstItem="ytK-Q4-gPu" firstAttribute="centerX" secondItem="a2t-kk-ss0" secondAttribute="centerX" id="ai9-Wb-oKV"/>
-                            <constraint firstItem="XNY-r8-QDn" firstAttribute="trailing" secondItem="yQl-2Y-SuD" secondAttribute="trailing" id="pAf-Sl-fnW"/>
                             <constraint firstItem="ZKJ-wt-LTY" firstAttribute="leading" secondItem="yQl-2Y-SuD" secondAttribute="leading" id="yhe-Tr-bon"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yQl-2Y-SuD"/>
@@ -309,7 +300,6 @@
                         <outlet property="activityRepsField" destination="Glr-JN-Ntd" id="mZd-fb-6fE"/>
                         <outlet property="activitySetsField" destination="VLX-cl-gDa" id="riF-Ku-w5j"/>
                         <outlet property="activityTypeField" destination="SYs-ml-rtd" id="fHo-iH-bwN"/>
-                        <outlet property="activityTypePicker" destination="XNY-r8-QDn" id="or1-Px-g3g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpz-lE-EVg" userLabel="First Responder" sceneMemberID="firstResponder"/>

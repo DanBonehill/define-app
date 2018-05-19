@@ -10,26 +10,21 @@ import UIKit
 
 class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
-    var activityPickerData: [String] = [String]()
-    
-    @IBOutlet weak var activityTypePicker: UIPickerView!
     @IBOutlet weak var activityTypeField: UITextField!
     @IBOutlet weak var activityRepsField: UITextField!
     @IBOutlet weak var activitySetsField: UITextField!
+    
+    var activityTypePicker : UIPickerView!
+    var activityPickerData: [String] = ["Squats", "Plank", "Press Up", "Crunches", "Sit Ups", "Bridge", "The Bird Dog"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.activityTypeField.delegate = self
-        self.activityTypePicker.delegate = self
-        self.activityTypePicker.dataSource = self
         
         activityTypeField.text = "Select Activity"
         activityTypeField.textAlignment = .center
-        
-        activityPickerData = ["Squats", "Plank", "Press Up", "Crunches", "Sit Ups", "Bridge", "The Bird Dog"]
-        activityTypePicker.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1) // #F6F6F6
-        activityTypePicker.isHidden = true
+        activityTypeField.allowsEditingTextAttributes = false
     }
     
     @IBAction func createActivityBtnPressed(_ sender: Any) {
@@ -39,6 +34,32 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         } else {
             print("No values provided")
         }
+    }
+    
+    func pickUp(_ textField : UITextField){
+        
+        // UIPickerView
+        self.activityTypePicker = UIPickerView(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.activityTypePicker.delegate = self
+        self.activityTypePicker.dataSource = self
+        self.activityTypePicker.backgroundColor = UIColor.white
+        textField.inputView = self.activityTypePicker
+        
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -54,15 +75,20 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.view.endEditing(true)
-        activityTypePicker.isHidden = true
-        activityTypeField.isHidden = false
         activityTypeField.text = activityPickerData[row]
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        activityTypeField.isHidden = true
-        activityTypePicker.isHidden = false
+        self.pickUp(activityTypeField)
+    }
+    
+    @objc func doneClick() {
+        activityTypeField.resignFirstResponder()
+    }
+    
+    @objc func cancelClick() {
+        activityTypeField.text = "Select Activity"
+        activityTypeField.resignFirstResponder()
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
