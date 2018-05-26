@@ -44,4 +44,17 @@ class UserService {
             }
         }
     }
+    
+    func getUser() -> User {
+        do {
+            let realm = try Realm(configuration: RealmConfig.dataConfig)
+            let results = realm.objects(User.self)
+            let user = results[0]
+            
+            return user
+        } catch {
+            debugPrint("Error retrieving user in realm: \(error.localizedDescription)")
+        }
+        return User()
+    }
 }
