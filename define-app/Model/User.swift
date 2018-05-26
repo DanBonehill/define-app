@@ -12,11 +12,11 @@ import RealmSwift
 class User: Object {
     @objc dynamic public private(set) var name: String = ""
     @objc dynamic public private(set) var age: Int = 0
-    @objc dynamic public private(set) var height: Double = 0.0
-    @objc dynamic public private(set) var weight: Double = 0.0
-    @objc dynamic public private(set) var goalWeight: Double = 0.0
+    @objc dynamic public private(set) var height: Int = 0
+    @objc dynamic public private(set) var weight: Int = 0
+    @objc dynamic public private(set) var goalWeight: Int = 0
     
-    convenience init(name: String, age: Int, height: Double, weight: Double, goalWeight: Double) {
+    convenience init(name: String, age: Int, height: Int, weight: Int, goalWeight: Int) {
         self.init()
         
         self.name = name

@@ -12,6 +12,8 @@
 		312B1E922083E0F00044D006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312B1E912083E0F00044D006 /* Assets.xcassets */; };
 		312B1E952083E0F00044D006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312B1E932083E0F00044D006 /* LaunchScreen.storyboard */; };
 		319F435620B02D8E00A8EB19 /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319F435520B02D8E00A8EB19 /* CreateUserVC.swift */; };
+		319F435820B045CD00A8EB19 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319F435720B045CD00A8EB19 /* StringExt.swift */; };
+		319F435A20B95D7D00A8EB19 /* IntExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319F435920B95D7D00A8EB19 /* IntExt.swift */; };
 		31BBA80C2094922A00FC6768 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA80B2094922A00FC6768 /* ActivityVC.swift */; };
 		31BBA80E209492C300FC6768 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA80D209492C300FC6768 /* InfoVC.swift */; };
 		31BBA810209492F800FC6768 /* AddActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA80F209492F800FC6768 /* AddActivityVC.swift */; };
@@ -34,6 +36,8 @@
 		312B1E942083E0F00044D006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		312B1E962083E0F00044D006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		319F435520B02D8E00A8EB19 /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
+		319F435720B045CD00A8EB19 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		319F435920B95D7D00A8EB19 /* IntExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExt.swift; sourceTree = "<group>"; };
 		31BBA80B2094922A00FC6768 /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
 		31BBA80D209492C300FC6768 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		31BBA80F209492F800FC6768 /* AddActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityVC.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				31BBA8202097AC8600FC6768 /* NSDateExt.swift */,
+				319F435720B045CD00A8EB19 /* StringExt.swift */,
+				319F435920B95D7D00A8EB19 /* IntExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -309,6 +315,8 @@
 				31BBA80E209492C300FC6768 /* InfoVC.swift in Sources */,
 				31BBA82520A21F4200FC6768 /* UserService.swift in Sources */,
 				31BBA80C2094922A00FC6768 /* ActivityVC.swift in Sources */,
+				319F435820B045CD00A8EB19 /* StringExt.swift in Sources */,
+				319F435A20B95D7D00A8EB19 /* IntExt.swift in Sources */,
 				319F435620B02D8E00A8EB19 /* CreateUserVC.swift in Sources */,
 				31BBA81C2096738F00FC6768 /* Constants.swift in Sources */,
 				31BBA82320A0486400FC6768 /* User.swift in Sources */,

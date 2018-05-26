@@ -14,9 +14,9 @@ class RealmConfig {
         let realmPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("realmConfig")
         let config = Realm.Configuration(
             fileURL: realmPath,
-            schemaVersion: 1,
+            schemaVersion: 2,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 2) {
+                if (oldSchemaVersion < 3) {
                     // Nothing to do!
                 }
         })

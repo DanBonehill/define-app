@@ -28,7 +28,7 @@ class UserService {
         return true
     }
     
-    func createUser(name: String, age: Int, height: Double, weight: Double, goalWeight: Double) {
+    func createUser(name: String, age: Int, height: Int, weight: Int, goalWeight: Int, userCreated: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         QUEUE.sync {
             let user = User(name: name, age: age, height: height, weight: weight, goalWeight: goalWeight)
             do {
@@ -36,9 +36,11 @@ class UserService {
                 try realm.write {
                     realm.add(user)
                     try realm.commitWrite()
+                    userCreated(true, nil)
                 }
             } catch {
                 debugPrint("Error creating user in realm: \(error.localizedDescription)")
+                userCreated(false, error)
             }
         }
     }
