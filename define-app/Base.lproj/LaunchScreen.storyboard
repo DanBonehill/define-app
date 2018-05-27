@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Define" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUN-Fc-qgZ">
-                                <rect key="frame" x="58" y="44" width="258" height="91"/>
+                                <rect key="frame" x="58" y="49" width="258" height="91"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="72"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                             <constraint firstItem="EUN-Fc-qgZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="Hm5-oU-SzL"/>
                             <constraint firstItem="orX-XM-Tvb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HwN-ro-xc9"/>
                             <constraint firstItem="orX-XM-Tvb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="J1b-O7-Shr"/>
-                            <constraint firstItem="EUN-Fc-qgZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mvi-ih-xT6"/>
+                            <constraint firstItem="EUN-Fc-qgZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Mvi-ih-xT6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EUN-Fc-qgZ" secondAttribute="trailing" constant="59" id="WXH-lA-v8u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="orX-XM-Tvb" secondAttribute="trailing" id="aQl-BG-ys5"/>
                             <constraint firstAttribute="bottom" secondItem="orX-XM-Tvb" secondAttribute="bottom" id="pBk-wj-e8g"/>
