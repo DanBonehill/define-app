@@ -13,9 +13,11 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     @IBOutlet weak var activityTypeField: UITextField!
     @IBOutlet weak var activityRepsField: UITextField!
     @IBOutlet weak var activitySetsField: UITextField!
+    @IBOutlet weak var repsLbl: UILabel!
     
     var activityTypePicker : UIPickerView!
-    var activityPickerData: [String] = ["Squats", "Plank", "Press Up", "Crunches", "Sit Ups", "Bridge", "The Bird Dog"]
+    var activityPickerData: [String] = ["", "Squats", "Plank", "Press Up", "Crunches", "Sit Ups", "Bridge", "The Bird Dog"]
+    var selectedRow = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,16 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         activityTypeField.text = "Select Activity"
         activityTypeField.textAlignment = .center
         activityTypeField.allowsEditingTextAttributes = false
+        
+        activityTypeField.addTarget(self, action: #selector(setSeconds), for: .allEditingEvents)
+    }
+    
+    @objc func setSeconds() {
+        if activityTypeField.text == "Plank" {
+            repsLbl.text = "Secs"
+        } else {
+            repsLbl.text = "Reps"
+        }
     }
     
     @IBAction func createActivityBtnPressed(_ sender: Any) {
@@ -43,6 +55,8 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         self.activityTypePicker.delegate = self
         self.activityTypePicker.dataSource = self
         self.activityTypePicker.backgroundColor = UIColor.white
+        // Sets row to the previously selected row
+        self.activityTypePicker.selectRow(selectedRow, inComponent: 0, animated: true)
         textField.inputView = self.activityTypePicker
         
         // ToolBar
@@ -76,6 +90,7 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         activityTypeField.text = activityPickerData[row]
+        selectedRow = row
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -88,6 +103,7 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     @objc func cancelClick() {
         activityTypeField.text = "Select Activity"
+        selectedRow = 0
         activityTypeField.resignFirstResponder()
     }
     

@@ -15,6 +15,7 @@ class ActivityCell: UITableViewCell {
     @IBOutlet weak var activityRepsCountLbl: UILabel!
     @IBOutlet weak var activitySetsCountLbl: UILabel!
     @IBOutlet weak var activityTotalCountLbl: UILabel!
+    @IBOutlet weak var activityRepsLbl: UILabel!
     
     func updateViews(activity: Activity) {
         activityDateLbl.text = activity.activityDate.getDateString()
@@ -22,5 +23,9 @@ class ActivityCell: UITableViewCell {
         activityRepsCountLbl.text = "\(activity.activityRepsCount)"
         activitySetsCountLbl.text = "\(activity.activitySetsCount)"
         activityTotalCountLbl.text = "\(activity.activityTotalCount)"
+        
+        if activity.activityType == "Plank" {
+            activityRepsLbl.text = "Secs"
+        }
     }
 }

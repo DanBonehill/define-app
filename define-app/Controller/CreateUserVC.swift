@@ -21,6 +21,10 @@ class CreateUserVC: UIViewController {
     }
     
     @IBAction func createBtnWasPressed(_ sender: Any) {
+        createUser()
+    }
+    
+    func createUser() {
         if nameTxtField.text != "" && ageTxtField.text != "" && heightTxtField.text != "" && weightTxtField.text != "" && goalWeightTxtField.text != "" {
             let name = nameTxtField.text!
             guard let age = Int(ageTxtField.text!) else { return print("Age is not number") }
