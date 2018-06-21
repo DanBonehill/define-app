@@ -41,8 +41,14 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     @IBAction func createActivityBtnPressed(_ sender: Any) {
         if activityTypeField.text != "Select Activity" && activityRepsField.text != "" && activitySetsField.text != "" {
-            DataService.instance.addActivity(activityType: activityTypeField.text!, activityRepsCount: Int(activityRepsField.text!)!, activitySetsCount: Int(activitySetsField.text!)!)
-            dismiss(animated: true, completion: nil)
+            DataService.instance.addActivity(activityType: activityTypeField.text!, activityRepsCount: Int(activityRepsField.text!)!, activitySetsCount: Int(activitySetsField.text!)!) { (success, error) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    print(error)
+                }
+            }
+            
         } else {
             print("No values provided")
         }

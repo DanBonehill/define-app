@@ -7,54 +7,40 @@
 //
 
 import Foundation
-import RealmSwift
+import Firebase
+
+let DB = Database.database().reference()
 
 class UserService {
     static let instance = UserService()
     
-    func checkForUser() -> Bool {
-        do {
-            let realm = try Realm(configuration: RealmConfig.dataConfig)
-            let results = realm.objects(User.self)
-            
-            if results.count == 0 {
-                return false
+    func registerUser(uid: String, userData: Dictionary<String, Any>) {
+        DB.child("users").child(uid).updateChildValues(userData)
+    }
+    
+    func createUser(uid: String, name: String, age: Int, height: Int, weight: Int, goalWeight: Int, handler: @escaping (_ status: Bool, _ error: Error?) -> ()) {
+        let user: Dictionary<String, Any> = ["name": name, "age": age, "height": height, "weight": weight, "goalWeight": goalWeight]
+        DB.child("users").child(uid).updateChildValues(user) { (error, ref) in
+            if error != nil {
+                handler(false, error)
             } else {
-                return true
-            }
-        } catch {
-            debugPrint("Error retrieving user in realm: \(error.localizedDescription)")
-        }
-        return true
-    }
-    
-    func createUser(name: String, age: Int, height: Int, weight: Int, goalWeight: Int, userCreated: @escaping (_ status: Bool, _ error: Error?) -> ()) {
-        QUEUE.sync {
-            let user = User(name: name, age: age, height: height, weight: weight, goalWeight: goalWeight)
-            do {
-                let realm = try Realm(configuration: RealmConfig.dataConfig)
-                try realm.write {
-                    realm.add(user)
-                    try realm.commitWrite()
-                    userCreated(true, nil)
-                }
-            } catch {
-                debugPrint("Error creating user in realm: \(error.localizedDescription)")
-                userCreated(false, error)
+                handler(true, nil)
             }
         }
     }
     
-    func getUser() -> User {
-        do {
-            let realm = try Realm(configuration: RealmConfig.dataConfig)
-            let results = realm.objects(User.self)
-            let user = results[0]
+    func getUser(forUid uid: String, handler: @escaping (_ error: Error?, _ user: User) -> ()) {
+        DB.child("users").child(uid).observeSingleEvent(of: .value) { (userSnapshot) in
+            guard let userSnapshot = userSnapshot.value as? NSDictionary else { return }
+            let name = userSnapshot["name"] as! String
+            let age = userSnapshot["age"] as! Int
+            let height = userSnapshot["height"] as! Int
+            let weight = userSnapshot["weight"] as! Int
+            let goalWeight = userSnapshot["goalWeight"] as! Int
             
-            return user
-        } catch {
-            debugPrint("Error retrieving user in realm: \(error.localizedDescription)")
+            let user = User(name: name, age: age, height: height, weight: weight, goalWeight: goalWeight)
+            
+            handler(nil, user)
         }
-        return User()
     }
 }

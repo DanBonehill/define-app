@@ -1,5 +1,5 @@
 //
-//  CreateUserVC.swift
+//  CreateProfileVC.swift
 //  define-app
 //
 //  Created by Daniel Bonehill on 19/05/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateUserVC: UIViewController {
+class CreateProfileVC: UIViewController {
 
     @IBOutlet weak var nameTxtField: UITextField!
     @IBOutlet weak var ageTxtField: UITextField!
@@ -16,12 +16,18 @@ class CreateUserVC: UIViewController {
     @IBOutlet weak var weightTxtField: UITextField!
     @IBOutlet weak var goalWeightTxtField: UITextField!
     
+    var uid: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()        
     }
     
     @IBAction func createBtnWasPressed(_ sender: Any) {
         createUser()
+    }
+    
+    func initData(uid: String) {
+        self.uid = uid
     }
     
     func createUser() {
@@ -32,9 +38,10 @@ class CreateUserVC: UIViewController {
             guard let weight = weightTxtField.text?.weightToPounds() else { return print("Weight is not number") }
             guard let goalWeight = goalWeightTxtField.text?.weightToPounds() else { return print("Goal Weight is not number") }
             
-            UserService.instance.createUser(name: name, age: age, height: height, weight: weight, goalWeight: goalWeight) { (success, error) in
+            UserService.instance.createUser(uid: uid!, name: name, age: age, height: height, weight: weight, goalWeight: goalWeight) { (success, error) in
                 if success {
-                    self.dismiss(animated: true, completion: nil)
+                    let tabBarController = (self.storyboard?.instantiateViewController(withIdentifier: "TabBarController"))!
+                    self.present(tabBarController, animated: true, completion: nil)
                 } else {
                     print(String(describing: error?.localizedDescription))
                 }

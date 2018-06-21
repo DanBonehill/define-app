@@ -7,5 +7,3 @@
 //
 
 import Foundation
-
-let QUEUE = DispatchQueue(label: "queue")

@@ -7,18 +7,15 @@
 //
 
 import Foundation
-import RealmSwift
 
-class User: Object {
-    @objc dynamic public private(set) var name: String = ""
-    @objc dynamic public private(set) var age: Int = 0
-    @objc dynamic public private(set) var height: Int = 0
-    @objc dynamic public private(set) var weight: Int = 0
-    @objc dynamic public private(set) var goalWeight: Int = 0
+class User {
+    public private(set) var name: String = ""
+    public private(set) var age: Int = 0
+    public private(set) var height: Int = 0
+    public private(set) var weight: Int = 0
+    public private(set) var goalWeight: Int = 0
     
-    convenience init(name: String, age: Int, height: Int, weight: Int, goalWeight: Int) {
-        self.init()
-        
+    init(name: String, age: Int, height: Int, weight: Int, goalWeight: Int) {
         self.name = name
         self.age = age
         self.height = height

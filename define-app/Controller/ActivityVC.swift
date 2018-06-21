@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class ActivityVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var activities = DataService.instance.getAllActivities()
+    var activities: [Activity] = []
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -26,12 +27,13 @@ class ActivityVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (activities?.count)!
+//        return (activities?.count)!
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell") as? ActivityCell {
-            cell.updateViews(activity: activities![indexPath.row])
+//            cell.updateViews(activity: activities![indexPath.row])
             return cell
         } else {
             return ActivityCell()
