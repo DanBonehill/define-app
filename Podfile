@@ -6,7 +6,6 @@ target 'define-app' do
   use_frameworks!
 
   # Pods for define-app
-  pod 'RealmSwift'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'

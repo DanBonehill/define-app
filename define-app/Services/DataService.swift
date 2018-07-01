@@ -18,23 +18,29 @@ class DataService {
             if error != nil {
                 handler(false, error)
             } else {
-                print(ref)
                 handler(true, nil)
             }
         }
     }
     
-    func getAllActivities(forUid uid: String, handler: @escaping(_ activities: [Activity]?) -> ()) {
+    func getAllActivities(forUid uid: String, handler: @escaping(_ activities: [Activity]) -> ()) {
         var activites = [Activity]()
         
-        DB.child("activities").observeSingleEvent(of: .value) { (activitySnapshot) in
-            guard let activitySnapshot = activitySnapshot.value as? [NSDictionary] else { return }
+        DB.child("activities").observe(.value) { (activitySnapshot) in
+            guard let activityData = activitySnapshot.value as? [String : AnyObject] else { return }
             
-            for activity in activitySnapshot {
-                if activity["uid"] as? String == Auth.auth().currentUser?.uid {
-                    print(activity["uid"]!)
+            activityData.values.forEach({ (activty) in
+                if activty["userID"] as? String == Auth.auth().currentUser?.uid {
+                    let activtyType = activty["activityType"] as? String
+                    let activityRepsCount = activty["activityRepsCount"] as? Int
+                    let activitySetsCount = activty["activitySetsCount"] as? Int
+                    
+                    let activityObj = Activity(activityType: activtyType!, activityRepsCount: activityRepsCount!, activitySetsCount: activitySetsCount!)
+                    activites.append(activityObj)
                 }
-            }
+            })
+            
+            handler(activites)
         }
     }
 }

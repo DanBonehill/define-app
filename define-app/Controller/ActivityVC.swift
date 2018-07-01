@@ -23,17 +23,22 @@ class ActivityVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            DataService.instance.getAllActivities(forUid: (Auth.auth().currentUser?.uid)!) { (activityArray) in
+                self.activities = activityArray
+                self.tableView.reloadData()
+            }
+        }
         tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return (activities?.count)!
-        return 1
+        return (activities.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell") as? ActivityCell {
-//            cell.updateViews(activity: activities![indexPath.row])
+            cell.updateViews(activity: activities[indexPath.row])
             return cell
         } else {
             return ActivityCell()
