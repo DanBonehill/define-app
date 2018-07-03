@@ -17,6 +17,10 @@ class CreateProfileVC: UIViewController {
     @IBOutlet weak var goalWeightTxtField: UITextField!
     
     var uid: String?
+    var heightFtPickerData: [String] = ["1ft", "2ft", "3ft", "4ft", "5ft", "6ft", "7ft"]
+    var heightInPickerData: [String] = ["1in", "2in", "3in", "4in", "5in", "6in", "7in", "8in", "9in", "10in", "11in"]
+    var weightStPickerData: [String] = ["1st", "2st", "3st", "4st", "5st", "6st", "7st", "8st", "9st", "10st", "11st", "12st", "13st", "14st", "15st"]
+    var weightLbsPickerData: [String] = ["1lb", "2lbs", "3lbs", "4lbs", "5lbs", "6lbs", "7lbs", "8lbs", "9lbs", "10lbs", "11lbs", "12lbs", "13lbs"]
     
     override func viewDidLoad() {
         super.viewDidLoad()        

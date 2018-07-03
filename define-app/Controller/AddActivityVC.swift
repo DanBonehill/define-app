@@ -31,21 +31,13 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         activityTypeField.addTarget(self, action: #selector(setSeconds), for: .allEditingEvents)
     }
     
-    @objc func setSeconds() {
-        if activityTypeField.text == "Plank" {
-            repsLbl.text = "Secs"
-        } else {
-            repsLbl.text = "Reps"
-        }
-    }
-    
     @IBAction func createActivityBtnPressed(_ sender: Any) {
         if activityTypeField.text != "Select Activity" && activityRepsField.text != "" && activitySetsField.text != "" {
             DataService.instance.addActivity(activityType: activityTypeField.text!, activityRepsCount: Int(activityRepsField.text!)!, activitySetsCount: Int(activitySetsField.text!)!) { (success, error) in
                 if success {
                     self.dismiss(animated: true, completion: nil)
-                } else {
-                    print(error)
+                } else if error != nil {
+                    print(error!)
                 }
             }
             
@@ -111,6 +103,14 @@ class AddActivityVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         activityTypeField.text = "Select Activity"
         selectedRow = 0
         activityTypeField.resignFirstResponder()
+    }
+    
+    @objc func setSeconds() {
+        if activityTypeField.text == "Plank" {
+            repsLbl.text = "Secs"
+        } else {
+            repsLbl.text = "Reps"
+        }
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
