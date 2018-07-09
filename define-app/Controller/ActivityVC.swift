@@ -29,7 +29,7 @@ class ActivityVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.tableView.reloadData()
             }
         }
-        tableView.reloadData()
+//        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,4 +44,21 @@ class ActivityVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return ActivityCell()
         }
     }
+    
+//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+//            DataService.instance.deleteActivity(forUID: self.activities[indexPath.row].uid, handler: { (success, error) in
+//                if success {
+//                    self.activities.remove(at: indexPath.row)
+//                    self.tableView.reloadData()
+////                    self.tableView.deleteRows(at: [indexPath], with: .fade)
+//                } else if error != nil {
+//                    print(String(describing: error))
+//                }
+//            })
+//
+//        }
+//
+//        return [delete]
+//    }
 }

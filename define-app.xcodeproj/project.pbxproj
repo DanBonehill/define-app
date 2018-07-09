@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311BD02020F3B40500193872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311BD01F20F3B40500193872 /* Assets.xcassets */; };
 		312B1E8B2083E0ED0044D006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B1E8A2083E0ED0044D006 /* AppDelegate.swift */; };
 		312B1E902083E0ED0044D006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312B1E8E2083E0ED0044D006 /* Main.storyboard */; };
-		312B1E922083E0F00044D006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312B1E912083E0F00044D006 /* Assets.xcassets */; };
 		312B1E952083E0F00044D006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312B1E932083E0F00044D006 /* LaunchScreen.storyboard */; };
 		319F435620B02D8E00A8EB19 /* CreateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319F435520B02D8E00A8EB19 /* CreateProfileVC.swift */; };
 		319F435820B045CD00A8EB19 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319F435720B045CD00A8EB19 /* StringExt.swift */; };
@@ -32,10 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		311BD01F20F3B40500193872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		312B1E872083E0ED0044D006 /* define-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "define-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		312B1E8A2083E0ED0044D006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312B1E8F2083E0ED0044D006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		312B1E912083E0F00044D006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		312B1E942083E0F00044D006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		312B1E962083E0F00044D006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		319F435520B02D8E00A8EB19 /* CreateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileVC.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				31BBA81A2096738100FC6768 /* Utilities */,
 				312B1E8A2083E0ED0044D006 /* AppDelegate.swift */,
 				312B1E8E2083E0ED0044D006 /* Main.storyboard */,
-				312B1E912083E0F00044D006 /* Assets.xcassets */,
+				311BD01F20F3B40500193872 /* Assets.xcassets */,
 				312B1E932083E0F00044D006 /* LaunchScreen.storyboard */,
 				312B1E962083E0F00044D006 /* Info.plist */,
 				319F439620D4DD6300A8EB19 /* GoogleService-Info.plist */,
@@ -245,8 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				312B1E952083E0F00044D006 /* LaunchScreen.storyboard in Resources */,
-				312B1E922083E0F00044D006 /* Assets.xcassets in Resources */,
 				319F439720D4DD6400A8EB19 /* GoogleService-Info.plist in Resources */,
+				311BD02020F3B40500193872 /* Assets.xcassets in Resources */,
 				312B1E902083E0ED0044D006 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +464,7 @@
 			baseConfigurationReference = CD0EB39F5F2D867D025367F6 /* Pods-define-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7ZZ4473DX;
 				INFOPLIST_FILE = "define-app/Info.plist";
@@ -473,8 +474,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danbonehillapps.define-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -483,6 +485,7 @@
 			baseConfigurationReference = B317764EF35B5C41C2AAE5BD /* Pods-define-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7ZZ4473DX;
 				INFOPLIST_FILE = "define-app/Info.plist";
@@ -492,8 +495,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danbonehillapps.define-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

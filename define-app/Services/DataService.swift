@@ -29,18 +29,29 @@ class DataService {
         DB.child("activities").observe(.value) { (activitySnapshot) in
             guard let activityData = activitySnapshot.value as? [String : AnyObject] else { return }
             
-            activityData.values.forEach({ (activty) in
-                if activty["userID"] as? String == Auth.auth().currentUser?.uid {
-                    let activtyType = activty["activityType"] as? String
-                    let activityRepsCount = activty["activityRepsCount"] as? Int
-                    let activitySetsCount = activty["activitySetsCount"] as? Int
+            activityData.forEach({ (activity) in
+                if activity.value["userID"] as? String == Auth.auth().currentUser?.uid {
+                    let uid = String(describing: activity.key)
+                    let activtyType = activity.value["activityType"] as? String
+                    let activityRepsCount = activity.value["activityRepsCount"] as? Int
+                    let activitySetsCount = activity.value["activitySetsCount"] as? Int
                     
-                    let activityObj = Activity(activityType: activtyType!, activityRepsCount: activityRepsCount!, activitySetsCount: activitySetsCount!)
+                    let activityObj = Activity(uid: uid, activityType: activtyType!, activityRepsCount: activityRepsCount!, activitySetsCount: activitySetsCount!)
                     activites.append(activityObj)
                 }
             })
             
             handler(activites)
+        }
+    }
+    
+    func deleteActivity(forUID uid: String, handler: @escaping(_ status: Bool, _ error: Error?) -> ()) {
+        DB.child("activities").child(uid).removeValue { (error, dbRef) in
+            if error == nil {
+                handler(true, nil)
+            } else {
+                handler(false, error)
+            }
         }
     }
 }
