@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		311BD02020F3B40500193872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311BD01F20F3B40500193872 /* Assets.xcassets */; };
+		311BD02320F52BF900193872 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BD02220F52BF900193872 /* EditProfileVC.swift */; };
 		312B1E8B2083E0ED0044D006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B1E8A2083E0ED0044D006 /* AppDelegate.swift */; };
 		312B1E902083E0ED0044D006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312B1E8E2083E0ED0044D006 /* Main.storyboard */; };
 		312B1E952083E0F00044D006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312B1E932083E0F00044D006 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		311BD01F20F3B40500193872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		311BD02120F3BF5700193872 /* define-app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "define-app.entitlements"; sourceTree = "<group>"; };
+		311BD02220F52BF900193872 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		312B1E872083E0ED0044D006 /* define-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "define-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		312B1E8A2083E0ED0044D006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312B1E8F2083E0ED0044D006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				319F435520B02D8E00A8EB19 /* CreateProfileVC.swift */,
 				319F439220D2D19E00A8EB19 /* LoginVC.swift */,
 				319F439420D2D1CC00A8EB19 /* RegisterVC.swift */,
+				311BD02220F52BF900193872 /* EditProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				31BBA8192096218200FC6768 /* DataService.swift in Sources */,
 				312B1E8B2083E0ED0044D006 /* AppDelegate.swift in Sources */,
 				319F439320D2D19E00A8EB19 /* LoginVC.swift in Sources */,
+				311BD02320F52BF900193872 /* EditProfileVC.swift in Sources */,
 				31BBA8212097AC8600FC6768 /* NSDateExt.swift in Sources */,
 				31BBA810209492F800FC6768 /* AddActivityVC.swift in Sources */,
 				31BBA8132095C3F500FC6768 /* ActivityCell.swift in Sources */,

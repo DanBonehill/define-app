@@ -43,4 +43,15 @@ class UserService {
             handler(nil, user)
         }
     }
+    
+    func editUser(forUid uid: String, withUserData userData: User, handler: @escaping (_ status: Bool, _ error: Error?) -> ()) {
+        let editedUser: Dictionary<String, Any> = ["name": userData.name, "age": userData.age, "height": userData.height, "weight": userData.weight, "goalWeight": userData.goalWeight]
+        DB.child("users").child(uid).updateChildValues(editedUser) { (error, dbRef) in
+            if error != nil {
+                handler(false, error)
+            } else {
+                handler(true, nil)
+            }
+        }
+    }
 }

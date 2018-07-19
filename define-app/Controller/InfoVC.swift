@@ -59,6 +59,12 @@ class InfoVC: UIViewController {
         spinner.isHidden = true
     }
     
+    @IBAction func editButtonWasPressed(_ sender: Any) {
+        guard let editProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileVC") as? EditProfileVC else { return }
+        editProfileVC.initData(user: user)
+        self.present(editProfileVC, animated: true, completion: nil)
+    }
+    
     @IBAction func signOutBtnWasPressed(_ sender: Any) {
         do {
             try Auth.auth().signOut()
