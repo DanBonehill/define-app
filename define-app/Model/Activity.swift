@@ -10,15 +10,15 @@ import Foundation
 
 class Activity {
     public private(set) var uid: String!
-    public private(set) var activityDate: NSDate = NSDate()
+    public private(set) var activityDate: NSDate!
     public private(set) var activityType: String!
     public private(set) var activityRepsCount: Int = 0
     public private(set) var activitySetsCount: Int = 0
     public private(set) var activityTotalCount: Int = 0
     
-    init(uid: String, activityType: String, activityRepsCount: Int, activitySetsCount: Int) {
+    init(uid: String, activityType: String, activityRepsCount: Int, activitySetsCount: Int, activityDate: NSDate) {
         self.uid = uid
-        self.activityDate = NSDate()
+        self.activityDate = activityDate
         self.activityType = activityType
         self.activityRepsCount = activityRepsCount
         self.activitySetsCount = activitySetsCount
