@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		311BD02020F3B40500193872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311BD01F20F3B40500193872 /* Assets.xcassets */; };
 		311BD02320F52BF900193872 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BD02220F52BF900193872 /* EditProfileVC.swift */; };
+		312424AC211CB5FA00B2C955 /* FieldTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312424AB211CB5FA00B2C955 /* FieldTitleLabel.swift */; };
+		312424AE211CB8FE00B2C955 /* UserTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312424AD211CB8FE00B2C955 /* UserTextField.swift */; };
+		312424B0211CBADF00B2C955 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312424AF211CBADF00B2C955 /* SubmitButton.swift */; };
 		312B1E8B2083E0ED0044D006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B1E8A2083E0ED0044D006 /* AppDelegate.swift */; };
 		312B1E902083E0ED0044D006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312B1E8E2083E0ED0044D006 /* Main.storyboard */; };
 		312B1E952083E0F00044D006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312B1E932083E0F00044D006 /* LaunchScreen.storyboard */; };
@@ -36,6 +39,9 @@
 		311BD01F20F3B40500193872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		311BD02120F3BF5700193872 /* define-app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "define-app.entitlements"; sourceTree = "<group>"; };
 		311BD02220F52BF900193872 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		312424AB211CB5FA00B2C955 /* FieldTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTitleLabel.swift; sourceTree = "<group>"; };
+		312424AD211CB8FE00B2C955 /* UserTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextField.swift; sourceTree = "<group>"; };
+		312424AF211CBADF00B2C955 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		312B1E872083E0ED0044D006 /* define-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "define-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		312B1E8A2083E0ED0044D006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312B1E8F2083E0ED0044D006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				31BBA8122095C3F500FC6768 /* ActivityCell.swift */,
+				312424AB211CB5FA00B2C955 /* FieldTitleLabel.swift */,
+				312424AD211CB8FE00B2C955 /* UserTextField.swift */,
+				312424AF211CBADF00B2C955 /* SubmitButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -316,6 +325,8 @@
 				31BBA8162095C55400FC6768 /* Activity.swift in Sources */,
 				31BBA8192096218200FC6768 /* DataService.swift in Sources */,
 				312B1E8B2083E0ED0044D006 /* AppDelegate.swift in Sources */,
+				312424AC211CB5FA00B2C955 /* FieldTitleLabel.swift in Sources */,
+				312424B0211CBADF00B2C955 /* SubmitButton.swift in Sources */,
 				319F439320D2D19E00A8EB19 /* LoginVC.swift in Sources */,
 				311BD02320F52BF900193872 /* EditProfileVC.swift in Sources */,
 				31BBA8212097AC8600FC6768 /* NSDateExt.swift in Sources */,
@@ -326,6 +337,7 @@
 				31BBA80C2094922A00FC6768 /* ActivityVC.swift in Sources */,
 				319F435820B045CD00A8EB19 /* StringExt.swift in Sources */,
 				319F435A20B95D7D00A8EB19 /* IntExt.swift in Sources */,
+				312424AE211CB8FE00B2C955 /* UserTextField.swift in Sources */,
 				319F435620B02D8E00A8EB19 /* CreateProfileVC.swift in Sources */,
 				31BBA81C2096738F00FC6768 /* Constants.swift in Sources */,
 				319F439520D2D1CC00A8EB19 /* RegisterVC.swift in Sources */,
@@ -488,7 +500,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -510,7 +522,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

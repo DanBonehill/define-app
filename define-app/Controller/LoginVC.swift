@@ -27,6 +27,8 @@ class LoginVC: UIViewController {
                     self.present(tabBarController, animated: true, completion: nil)
                 }
             }
+        } else {
+            print("Please enter your email and password")
         }
     }
     
