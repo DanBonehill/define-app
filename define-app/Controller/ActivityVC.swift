@@ -44,7 +44,7 @@ class ActivityVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 //        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
 //            DataService.instance.deleteActivity(forUID: self.activities[indexPath.row].uid, handler: { (success, error) in
 //                if success {
@@ -57,7 +57,22 @@ class ActivityVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //            })
 //
 //        }
-//
+        
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
+            print("Edit Pressed")
+            let activity = self.activities[indexPath.row]
+            print(activity.uid)
+//            DataService.instance.editActivity(forActivity: activity.uid, withData: activity, handler: { (success, error) in
+//                if success {
+//                    self.dismiss(animated: true, completion: nil)
+//                } else if error != nil {
+//                    print(error!)
+//                }
+//            })
+        }
+        edit.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.5843137255, blue: 0.02745098039, alpha: 1)
+
 //        return [delete]
-//    }
+        return [edit]
+    }
 }
