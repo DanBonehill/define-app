@@ -608,13 +608,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mpt-aQ-shY">
-                                <rect key="frame" x="50" y="344" width="275" height="204"/>
+                                <rect key="frame" x="50" y="344" width="275" height="199"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="08Y-Bb-gzC">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="61.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="59.666666666666664"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ir6-6S-iLM" userLabel="Name Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="61.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="59.666666666666664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5x-W7-ulw" customClass="FieldTitleLabel" customModule="define_app" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="24.666666666666668"/>
@@ -623,13 +623,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26H-ev-wxs" customClass="UserTextField" customModule="define_app" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="29.666666666666686" width="125" height="25.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="29.666666666666686" width="125" height="24"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mtf-PW-CUO">
-                                                        <rect key="frame" x="0.0" y="60.333333333333314" width="125" height="1"/>
+                                                        <rect key="frame" x="0.0" y="58.666666666666686" width="125" height="1"/>
                                                         <color key="backgroundColor" red="0.69019607839999997" green="0.62352941179999999" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="S2z-0y-CIj"/>
@@ -638,7 +638,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JjB-zK-v4f" userLabel="Age Stack View">
-                                                <rect key="frame" x="150" y="0.0" width="125" height="61.333333333333336"/>
+                                                <rect key="frame" x="150" y="0.0" width="125" height="59.666666666666664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0d-kh-ss1" customClass="FieldTitleLabel" customModule="define_app" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="24.666666666666668"/>
@@ -647,13 +647,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWK-I0-CKl" customClass="UserTextField" customModule="define_app" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="29.666666666666686" width="125" height="25.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="29.666666666666686" width="125" height="24"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Je-Kb-Jko">
-                                                        <rect key="frame" x="0.0" y="60.333333333333314" width="125" height="1"/>
+                                                        <rect key="frame" x="0.0" y="58.666666666666686" width="125" height="1"/>
                                                         <color key="backgroundColor" red="0.69019607839999997" green="0.62352941179999999" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="ZHt-8F-Fc6"/>
@@ -670,10 +670,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ALz-An-pCO">
-                                        <rect key="frame" x="0.0" y="71.333333333333314" width="275" height="61.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="69.666666666666686" width="275" height="59.666666666666657"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qy8-u8-ceK" userLabel="Height Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="61.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="59.666666666666664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDk-8m-E9X" customClass="FieldTitleLabel" customModule="define_app" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="24.666666666666668"/>
@@ -682,13 +682,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5ft 3in" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2R-fb-vKy" customClass="UserTextField" customModule="define_app" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="29.666666666666686" width="125" height="25.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="29.666666666666629" width="125" height="24"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jC0-Hd-Xir">
-                                                        <rect key="frame" x="0.0" y="60.333333333333371" width="125" height="1"/>
+                                                        <rect key="frame" x="0.0" y="58.666666666666629" width="125" height="1"/>
                                                         <color key="backgroundColor" red="0.69019607839999997" green="0.62352941179999999" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="onY-z4-tUf"/>
@@ -697,7 +697,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Wt-Kv-fYN" userLabel="Weight Stack View">
-                                                <rect key="frame" x="150" y="0.0" width="125" height="61.333333333333336"/>
+                                                <rect key="frame" x="150" y="0.0" width="125" height="59.666666666666664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsr-rm-6GB" customClass="FieldTitleLabel" customModule="define_app" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="24.666666666666668"/>
@@ -706,13 +706,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="11st 7lbs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xht-z8-Aod" customClass="UserTextField" customModule="define_app" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="29.666666666666686" width="125" height="25.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="29.666666666666629" width="125" height="24"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zfh-zZ-S3p">
-                                                        <rect key="frame" x="0.0" y="60.333333333333371" width="125" height="1"/>
+                                                        <rect key="frame" x="0.0" y="58.666666666666629" width="125" height="1"/>
                                                         <color key="backgroundColor" red="0.69019607839999997" green="0.62352941179999999" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="mWd-6D-8np"/>
@@ -729,22 +729,22 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cm3-j9-NAx" userLabel="Goal Stack View">
-                                        <rect key="frame" x="0.0" y="142.66666666666669" width="275" height="61.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="139.33333333333331" width="275" height="59.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX5-6e-pjz" customClass="FieldTitleLabel" customModule="define_app" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="275" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="24.666666666666668"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10st 3lbs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pnV-wM-Nan" customClass="UserTextField" customModule="define_app" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="25.333333333333314" width="275" height="30"/>
+                                                <rect key="frame" x="0.0" y="29.666666666666686" width="275" height="24"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vnB-he-5B3">
-                                                <rect key="frame" x="0.0" y="60.333333333333314" width="275" height="1"/>
+                                                <rect key="frame" x="0.0" y="58.666666666666686" width="275" height="1"/>
                                                 <color key="backgroundColor" red="0.69019607839999997" green="0.62352941179999999" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="q4S-Am-n0y"/>
@@ -763,7 +763,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn5-rx-WE9" customClass="SubmitButton" customModule="define_app" customModuleProvider="target">
-                                <rect key="frame" x="50.333333333333343" y="588" width="275" height="50"/>
+                                <rect key="frame" x="50.333333333333343" y="583" width="275" height="50"/>
                                 <state key="normal" title="Create">
                                     <color key="titleColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
