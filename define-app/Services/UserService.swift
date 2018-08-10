@@ -32,15 +32,22 @@ class UserService {
     func getUser(forUid uid: String, handler: @escaping (_ error: Error?, _ user: User) -> ()) {
         DB.child("users").child(uid).observeSingleEvent(of: .value) { (userSnapshot) in
             guard let userSnapshot = userSnapshot.value as? NSDictionary else { return }
-            let name = userSnapshot["name"] as! String
-            let age = userSnapshot["age"] as! Int
-            let height = userSnapshot["height"] as! Int
-            let weight = userSnapshot["weight"] as! Int
-            let goalWeight = userSnapshot["goalWeight"] as! Int
             
-            let user = User(name: name, age: age, height: height, weight: weight, goalWeight: goalWeight)
-            
-            handler(nil, user)
+            if userSnapshot.allKeys.count > 2 {
+                let name = userSnapshot["name"] as! String
+                let age = userSnapshot["age"] as! Int
+                let height = userSnapshot["height"] as! Int
+                let weight = userSnapshot["weight"] as! Int
+                let goalWeight = userSnapshot["goalWeight"] as! Int
+                
+                let user = User(name: name, age: age, height: height, weight: weight, goalWeight: goalWeight)
+                
+                handler(nil, user)
+            } else {
+//                Create error to send back to VC
+//                let error: Error =
+//                handler(nil, nil)
+            }
         }
     }
     
