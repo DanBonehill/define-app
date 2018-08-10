@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class SubmitButton: UIButton {
 
     override func awakeFromNib() {
@@ -18,5 +19,9 @@ class SubmitButton: UIButton {
         
         self.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18.0)
     }
-
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        self.awakeFromNib()
+    }
 }
