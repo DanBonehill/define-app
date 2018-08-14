@@ -77,7 +77,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wz5-75-NE8">
-                                                    <rect key="frame" x="19.666666666666657" y="5.3333333333333357" width="316" height="59.666666666666664"/>
+                                                    <rect key="frame" x="19.666666666666657" y="5.3333333333333428" width="316" height="59.666666666666657"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0fs-oX-2WH">
                                                             <rect key="frame" x="0.0" y="0.0" width="148" height="59.666666666666664"/>
@@ -455,9 +455,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDQ-LH-wtE">
-                                <rect key="frame" x="25" y="44" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDQ-LH-wtE">
+                                <rect key="frame" x="15" y="52" width="30" height="27"/>
+                                <state key="normal" image="backIcon"/>
                                 <connections>
                                     <action selector="backBtnWasPressed:" destination="XGH-YP-pe9" eventType="touchUpInside" id="nfp-FN-gF6"/>
                                 </connections>
@@ -577,12 +577,12 @@
                             <constraint firstItem="Fwq-hj-Efz" firstAttribute="top" secondItem="t9O-FK-vjn" secondAttribute="top" constant="30" id="Ih2-t7-jnV"/>
                             <constraint firstItem="t9O-FK-vjn" firstAttribute="trailing" secondItem="EuH-aP-3eZ" secondAttribute="trailing" constant="25" id="LDF-6i-Tx3"/>
                             <constraint firstItem="Fwq-hj-Efz" firstAttribute="centerX" secondItem="sBG-Aa-F77" secondAttribute="centerX" id="Ltf-D2-ZSS"/>
-                            <constraint firstItem="PDQ-LH-wtE" firstAttribute="top" secondItem="t9O-FK-vjn" secondAttribute="top" id="OpB-qr-kDB"/>
+                            <constraint firstItem="PDQ-LH-wtE" firstAttribute="top" secondItem="t9O-FK-vjn" secondAttribute="top" constant="8" id="OpB-qr-kDB"/>
                             <constraint firstItem="2Ya-us-XND" firstAttribute="top" secondItem="dhi-MO-CIu" secondAttribute="bottom" constant="20" id="Tn2-2v-DGy"/>
                             <constraint firstItem="EuH-aP-3eZ" firstAttribute="top" secondItem="Fwq-hj-Efz" secondAttribute="bottom" constant="30" id="UNd-NI-RlW"/>
                             <constraint firstItem="JlR-1A-T0e" firstAttribute="centerX" secondItem="sBG-Aa-F77" secondAttribute="centerX" id="YBR-vb-lBX"/>
                             <constraint firstItem="dhi-MO-CIu" firstAttribute="top" secondItem="t9O-FK-vjn" secondAttribute="top" constant="45" id="ftZ-0H-otd"/>
-                            <constraint firstItem="PDQ-LH-wtE" firstAttribute="leading" secondItem="t9O-FK-vjn" secondAttribute="leading" constant="25" id="isi-PG-yFY"/>
+                            <constraint firstItem="PDQ-LH-wtE" firstAttribute="leading" secondItem="t9O-FK-vjn" secondAttribute="leading" constant="15" id="isi-PG-yFY"/>
                             <constraint firstItem="2Ya-us-XND" firstAttribute="centerX" secondItem="dhi-MO-CIu" secondAttribute="centerX" id="k3N-wg-0Sz"/>
                             <constraint firstItem="JlR-1A-T0e" firstAttribute="width" secondItem="EuH-aP-3eZ" secondAttribute="width" id="xUx-Yt-eHo"/>
                         </constraints>
@@ -1193,6 +1193,7 @@
     <resources>
         <image name="Add Btn" width="27" height="27"/>
         <image name="Kettlebell Opaque" width="180" height="240"/>
+        <image name="backIcon" width="35" height="27"/>
         <image name="pebbles" width="564" height="1002"/>
     </resources>
 </document>

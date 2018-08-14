@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		311BD02020F3B40500193872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311BD01F20F3B40500193872 /* Assets.xcassets */; };
 		311BD02320F52BF900193872 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BD02220F52BF900193872 /* EditProfileVC.swift */; };
 		312424AC211CB5FA00B2C955 /* FieldTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312424AB211CB5FA00B2C955 /* FieldTitleLabel.swift */; };
 		312424AE211CB8FE00B2C955 /* UserTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312424AD211CB8FE00B2C955 /* UserTextField.swift */; };
@@ -33,11 +32,11 @@
 		31BBA8212097AC8600FC6768 /* NSDateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA8202097AC8600FC6768 /* NSDateExt.swift */; };
 		31BBA82320A0486400FC6768 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA82220A0486400FC6768 /* User.swift */; };
 		31BBA82520A21F4200FC6768 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BBA82420A21F4200FC6768 /* UserService.swift */; };
+		31C98E742120DED400D13264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C98E732120DED300D13264 /* Assets.xcassets */; };
 		55637EA8E0B1E95F6C210D37 /* Pods_define_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBD0873A4C1DF03873BABC2 /* Pods_define_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		311BD01F20F3B40500193872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		311BD02120F3BF5700193872 /* define-app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "define-app.entitlements"; sourceTree = "<group>"; };
 		311BD02220F52BF900193872 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		312424AB211CB5FA00B2C955 /* FieldTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTitleLabel.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		31BBA8202097AC8600FC6768 /* NSDateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDateExt.swift; sourceTree = "<group>"; };
 		31BBA82220A0486400FC6768 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		31BBA82420A21F4200FC6768 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		31C98E732120DED300D13264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DBD0873A4C1DF03873BABC2 /* Pods_define_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_define_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B317764EF35B5C41C2AAE5BD /* Pods-define-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-define-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-define-app/Pods-define-app.release.xcconfig"; sourceTree = "<group>"; };
 		CD0EB39F5F2D867D025367F6 /* Pods-define-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-define-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-define-app/Pods-define-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				31BBA81A2096738100FC6768 /* Utilities */,
 				312B1E8A2083E0ED0044D006 /* AppDelegate.swift */,
 				312B1E8E2083E0ED0044D006 /* Main.storyboard */,
-				311BD01F20F3B40500193872 /* Assets.xcassets */,
+				31C98E732120DED300D13264 /* Assets.xcassets */,
 				312B1E932083E0F00044D006 /* LaunchScreen.storyboard */,
 				312B1E962083E0F00044D006 /* Info.plist */,
 				319F439620D4DD6300A8EB19 /* GoogleService-Info.plist */,
@@ -268,7 +268,7 @@
 			files = (
 				312B1E952083E0F00044D006 /* LaunchScreen.storyboard in Resources */,
 				319F439720D4DD6400A8EB19 /* GoogleService-Info.plist in Resources */,
-				311BD02020F3B40500193872 /* Assets.xcassets in Resources */,
+				31C98E742120DED400D13264 /* Assets.xcassets in Resources */,
 				312B1E902083E0ED0044D006 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
