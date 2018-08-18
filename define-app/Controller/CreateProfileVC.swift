@@ -31,7 +31,7 @@ class CreateProfileVC: UIViewController {
     
     var heightFtPickerData: [String] = ["4ft", "5ft", "6ft", "7ft"]
     var heightInPickerData: [String] = ["0in", "1in", "2in", "3in", "4in", "5in", "6in", "7in", "8in", "9in", "10in", "11in"]
-    var weightStPickerData: [String] = ["7st", "8st", "9st", "10st", "11st", "12st", "13st", "14st", "15st"]
+    var weightStPickerData: [String] = ["7st", "8st", "9st", "10st", "11st", "12st", "13st", "14st", "15st", "16st", "17st", "18st", "19st", "20st", "21st", "22st", "23st", "24st", "25st"]
     var weightLbsPickerData: [String] = ["0lb", "1lb", "2lbs", "3lbs", "4lbs", "5lbs", "6lbs", "7lbs", "8lbs", "9lbs", "10lbs", "11lbs", "12lbs", "13lbs"]
     
     override func viewDidLoad() {
