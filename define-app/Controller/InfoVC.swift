@@ -59,13 +59,7 @@ class InfoVC: UIViewController {
         spinner.isHidden = true
     }
     
-    @IBAction func editButtonWasPressed(_ sender: Any) {
-        guard let editProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileVC") as? EditProfileVC else { return }
-        editProfileVC.initData(user: user)
-        self.present(editProfileVC, animated: true, completion: nil)
-    }
-    
-    @IBAction func signOutBtnWasPressed(_ sender: Any) {
+    func logout() {
         do {
             try Auth.auth().signOut()
             let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
@@ -73,5 +67,23 @@ class InfoVC: UIViewController {
         } catch {
             print(String(describing: error.localizedDescription))
         }
+    }
+    
+    @IBAction func editButtonWasPressed(_ sender: Any) {
+        guard let editProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileVC") as? EditProfileVC else { return }
+        editProfileVC.initData(user: user)
+        self.present(editProfileVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func signOutBtnWasPressed(_ sender: Any) {
+        let alertController = UIAlertController(title: "Sign out", message: "Do you wish to sign out?", preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let signOutAction = UIAlertAction(title: "Sign out", style: .destructive) { (action) in
+            self.logout()
+        }
+        
+        alertController.addAction(signOutAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
